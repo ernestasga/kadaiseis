@@ -9,7 +9,7 @@ const PopularShows = ({watchlist, setWatchlist, popularShows, cookies, setCookie
                 <Row>
                     {
                         popularShows.map((show) => (
-                            <Col key={show.id} sm="6" md="4" lg="3">
+                            <Col key={show.id} className="px-1" xs="6" sm="6" md="4" lg="3">
                                 <Show watchlist={watchlist} setWatchlist={setWatchlist} cookies={cookies} setCookie={setCookie} key={show.id} show={show}></Show>
                             </Col>
                         ))

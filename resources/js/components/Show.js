@@ -51,17 +51,17 @@ const Show = ({watchlist, setWatchlist, show, setCookie}) => {
                 {
                     show.nextepisode != null ?
                     <Row className="mt-2">
-                        <Col>
+                        <Col xs="12" sm="6">
                             <a rel="noreferrer" target="_blank" href={show.nextepisode.url}>
                                 <Badge className="Next-ep-badge badge-danger badge">{show.nextepisode.episode}</Badge>
                             </a>
                         </Col>
-                        <Col>
+                        <Col xs="12" sm="6">
                             <OverlayTrigger
                                 placement="top"
                                 overlay={renderTooltip}>
                                 
-                                <Badge className="Next-ep-badge badge-success badge" bg="success">
+                                <Badge className="Next-ep-badge badge-success badge text-wrap" bg="success">
                                     {   
                                         airdate != null ?
                                         airdate :
