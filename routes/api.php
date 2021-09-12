@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+/*
 Route::get('/social', function() {
     return Cache::remember(
         'social',
@@ -25,4 +26,5 @@ Route::get('/social', function() {
             ]);
     });
 });
+*/
 Route::get('popularShows', [ShowController::class, 'getPopular']);

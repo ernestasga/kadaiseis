@@ -16,7 +16,9 @@ function Root() {
   const [cookies, setCookie] = useCookies(['watchlist']);
   const initialWatchlist = cookies.watchlist != null ? cookies.watchlist : [];
   const [watchlist, setWatchlist] = useState(initialWatchlist);
-  const [socialLinks, setSocialLinks] = useState([])
+  const socialLinks = {
+    'facebook': 'https://facebook.com/groups/kadaiseis'
+  };
   useEffect(() => {
     const getPopularShows = async () => {
       const raw = await fetchPopularShows();
@@ -55,11 +57,12 @@ function Root() {
 
     getPopularShows();
   }, [watchlist]);
+  /*
   const getSocialLinks = async () => {
     const raw = await fetchSocialLinks();
     setSocialLinks(raw);
-    
   };
+  */
   const getSearchResult = async (input) => {
     if (input.length > 3) {
       const raw = await fetchSearchResults(input);
@@ -128,13 +131,14 @@ function Root() {
 
     return data;
   }
+  /*
   // Fetch social links
   const fetchSocialLinks = async () => {
     const apiUrl = '/api/social';
     const result = await fetch(apiUrl);
     const data = await result.json();
     return data;
-  }
+  }*/
 
   return (
       <BrowserRouter>
