@@ -52,7 +52,7 @@ function Root() {
           isWatching: isWatching
       }});
       setPopularShows(shows);
-      getSocialLinks();
+      //getSocialLinks();
     }
 
     getPopularShows();
