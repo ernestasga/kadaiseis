@@ -10,7 +10,7 @@ const Header = () => {
           <Navbar collapseOnSelect expand="lg">
               <Container>
               <NavLink to="/" className="text-white navbar-brand"><img width="200px" className="img img-responsive" src="/images/logo-text.png"/></NavLink>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" className="navbar-dark"/>
               <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ml-auto">
                 <NavLink to="/watchlist" className="text-white nav-link"><b>Mano serialai</b></NavLink>
