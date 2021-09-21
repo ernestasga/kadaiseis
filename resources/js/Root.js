@@ -17,7 +17,7 @@ function Root() {
   const initialWatchlist = cookies.watchlist != null ? cookies.watchlist : [];
   const [watchlist, setWatchlist] = useState(initialWatchlist);
   const socialLinks = {
-    'facebook': 'https://facebook.com/groups/kadaiseis'
+    'facebook': 'https://facebook.com/kadaiseis'
   };
   useEffect(() => {
     const getPopularShows = async () => {
